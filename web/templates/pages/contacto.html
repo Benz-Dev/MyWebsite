@@ -1,0 +1,15 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title %}Contacto{% endblock title %}
+{% block content %}
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Asunto">
+        <input type="text" placeholder="Nombre">
+        <input type="text" placeholder="Correo Electrónico">
+        <input type="text" placeholder="Mensaje">
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+{% endblock content %}

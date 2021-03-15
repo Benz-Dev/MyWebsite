@@ -7,3 +7,6 @@ def index(request):
         "proyectos": proyectos
     }
     return render(request, 'pages/index.html', context)
+
+def contact(request):
+    return render(request, 'pages/contacto.html')
