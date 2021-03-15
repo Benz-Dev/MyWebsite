@@ -1,0 +1,50 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title %}Inicio{% endblock title %}
+{% block content %}
+<main class="site-page">
+    <section id="inicio" class="for-me">
+        <div class="container">
+            <div class="presentation">
+                <div class="hey">Hey</div>
+                <h2>soy jose manuel</h2>
+                <div class="work">Desarrollador Web</div>
+                <div class="sociles">
+                    <a href="#">proyectos</a>
+                    <a href="#">ArticDev</a>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="{% static 'img/banner/banner-image.png' %}" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+
+    </section>
+    <section id="proyectos" class="projects"> 
+        <div class="container">
+            {% for proyecto in proyectos %}
+            <div class="project">
+                <img src="{{proyecto.image.url}}" alt="proyecto_{{proyecto.name}}">
+                <div class="datos">
+                    <div class="container-d">
+                        <div class="number-project">{% if proyecto.pk <= 9 %}0{% endif %}{{proyecto.pk}}.</div>
+                        <h3 class="title-project">{{proyecto.name}}</h3>
+                        <div class="content-project">{{proyecto.desc}}</div>
+                        <div class="tags-project">
+                        {% for tag in proyecto.tags.all %}
+                            <div class="tag">{{tag}}</div>
+                        {% endfor %}
+                        </div>
+                        {% if proyecto.github != 'null' %}
+                        <a href="{{proyecto.github}}" target="_blank"><i class="fab fa-github-square"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock content %}

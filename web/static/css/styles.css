@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
+@font-face {
+  font-family: "Roboto";
+  src: '../fonts/Roboto/Roboto-Regular.ttf';
+}
+
+@-webkit-keyframes ClockwiseSpin {
+  0% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes ClockwiseSpin {
+  0% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', cursive;
+}
+
+header {
+  background-color: #F0F0F0;
+  padding: .5rem 0;
+}
+
+header .navbar {
+  max-width: 85%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .navbar .logo:hover {
+  cursor: pointer;
+}
+
+header .navbar img {
+  width: 40px;
+  height: 40px;
+  -webkit-animation: ClockwiseSpin .5s;
+          animation: ClockwiseSpin .5s;
+}
+
+header .navbar .links a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #1d1d1d;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+header .navbar .links a:last-of-type {
+  padding: 1rem 0 1rem 1rem;
+}
+
+.site-page .for-me {
+  padding-top: 2rem;
+}
+
+.site-page .for-me .container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.site-page .for-me .container .presentation {
+  min-width: 400px;
+  padding-bottom: 12rem;
+  position: relative;
+}
+
+.site-page .for-me .container .presentation::after {
+  content: '';
+  left: 132px;
+  position: absolute;
+  right: 89px;
+  top: 42px;
+  height: 2px;
+  background-color: #363636;
+}
+
+.site-page .for-me .container .presentation .hey {
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.site-page .for-me .container .presentation h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+
+.site-page .for-me .container .presentation .work {
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.site-page .for-me .container .presentation .sociles {
+  margin-top: 2rem;
+}
+
+.site-page .for-me .container .presentation .sociles a {
+  padding: .8rem 2.2rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 900;
+  background: -webkit-gradient(linear, left top, right top, from(#44acdc), to(#4f81ee));
+  background: linear-gradient(90deg, #44acdc 0%, #4f81ee 100%);
+  background-clip: padding-box;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.site-page .for-me .container .presentation .sociles a:last-of-type {
+  margin-left: 30px;
+}
+
+.site-page .for-me .container .imagen img {
+  padding: 4rem 0;
+}
+
+.site-page .projects .container {
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+.site-page .projects .container .project {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 70px;
+}
+
+.site-page .projects .container .project img {
+  width: 50rem;
+}
+
+.site-page .projects .container .project .datos {
+  padding: 25px 35px;
+  position: relative;
+  right: 18rem;
+  border-radius: 4px;
+  background-color: #F0F0F0;
+}
+
+.site-page .projects .container .project .datos .container-d .number-project {
+  color: #03a9f4;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-page .projects .container .project .datos .container-d .title-project {
+  font-size: 30px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #363636;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+}
+
+.site-page .projects .container .project .datos .container-d .content-project {
+  font-size: 20px;
+  color: #161616;
+  margin-bottom: 20px;
+}
+
+.site-page .projects .container .project .datos .container-d .tags-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site-page .projects .container .project .datos .container-d .tags-project .tag {
+  font-size: 16px;
+  background-color: #3cdbff9e;
+  border: 10px;
+  padding: 5px 10px;
+  margin-right: 25px;
+}
+
+.site-page .projects .container .project .datos .container-d a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #161616;
+  font-size: 35px;
+}
+
+.footer-site {
+  background-color: #F0F0F0;
+  padding: 5rem 0;
+}
+
+.footer-site .container {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-site h3 {
+  font-family: 'Ranchers', cursive;
+  text-transform: uppercase;
+  margin: 15px 0;
+  font-size: 25px;
+  letter-spacing: 6px;
+}
+
+.footer-site .socials {
+  margin-bottom: 10px;
+}
+
+.footer-site .socials ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+.footer-site .socials ul a {
+  padding: 2rem;
+}
+
+.footer-site .socials ul a i {
+  color: #201f1f17;
+}
+
+.footer-site .socials ul a i:hover {
+  color: #03a9f4;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.footer-site .copy {
+  color: #777777;
+  font-weight: 700;
+}
+
+.footer-site .copy span {
+  color: #e91e63;
+}
+
+.footer-site .copy a {
+  text-decoration: none;
+  color: #03a9f4;
+}
+/*# sourceMappingURL=styles.css.map */
