@@ -2,13 +2,11 @@
 {% load static %}
 {% block title %}Contacto{% endblock title %}
 {% block content %}
-<div class="container">
+<div class="container-c">
+    <h1>Formulario de contacto</h1>
     <form method="post">
         {% csrf_token %}
-        <input type="text" placeholder="Asunto">
-        <input type="text" placeholder="Nombre">
-        <input type="text" placeholder="Correo Electrónico">
-        <input type="text" placeholder="Mensaje">
+        {{contacto}}
         <input type="submit" value="Enviar">
     </form>
 </div>

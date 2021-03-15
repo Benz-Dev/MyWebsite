@@ -18,7 +18,8 @@ class Project(models.Model):
     image = models.ImageField(upload_to="projects")
     desc = models.TextField(verbose_name="Descripción")
     tags = models.ManyToManyField(Tag, verbose_name="Etiquetas")
-    github = models.CharField(max_length=50, null=True)
+    github = models.CharField(max_length=255,null=True)
+    link = models.CharField(max_length=255,null=True, blank=True)
     class Meta:
         verbose_name = "Proyecto"
         verbose_name_plural = "Proyectos"

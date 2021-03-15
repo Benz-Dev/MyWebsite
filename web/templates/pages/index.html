@@ -3,6 +3,13 @@
 {% block title %}Inicio{% endblock title %}
 {% block content %}
 <main class="site-page">
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <div class="message">{{message}}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
     <section id="inicio" class="for-me">
         <div class="container">
             <div class="presentation">
@@ -37,9 +44,14 @@
                             <div class="tag">{{tag}}</div>
                         {% endfor %}
                         </div>
-                        {% if proyecto.github != 'null' %}
-                        <a href="{{proyecto.github}}" target="_blank"><i class="fab fa-github-square"></i></a>
-                        {% endif %}
+                        <div class="external">
+                            {% if proyecto.github != 'null' %}
+                            <a href="{{proyecto.github}}" target="_blank"><i class="fab fa-github-square"></i></a>
+                            {% endif %}
+                            {% if proyecto.link %}
+                            <a href="{{proyecto.link}}" target="_blank" class="link"><i class="fas fa-external-link-alt"></i></a>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>

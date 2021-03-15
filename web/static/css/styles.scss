@@ -24,6 +24,13 @@ img{
 header{
     background-color: #F0F0F0;
     padding: .5rem 0; 
+    z-index: 200;
+    &.active{
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+    }
     .navbar{
         max-width: 85%;
         margin: 0 auto;
@@ -151,13 +158,23 @@ header{
                             color: #161616;
                             margin-bottom: 20px;
                         }
+                        .external{
+                            display: flex;
+                            align-items: center;
+                            a.link{
+                                font-size: 30px;
+                            }
+                            a:nth-child(2){
+                                margin-left: 40px;
+                            }
+                        }
                         .tags-project{
                             display: flex;
                             align-items: center;
                             .tag{
                                 font-size: 16px;
                                 background-color: #3cdbff9e;
-                                border: 10px;
+                                border-radius: 3px;
                                 padding: 5px 10px;
                                 margin-right: 25px;
                             }
@@ -213,6 +230,73 @@ header{
         a{
             text-decoration: none;
             color: #03a9f4;
+        }
+    }
+}
+
+.messages{
+    position: absolute;
+    right: 69px;
+    top: 85px;
+    /* width: 433px; */
+    /* box-shadow: 2px 5px 3px 2px #b3b3b3; */
+    box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.247);
+    border-radius: 7px;
+    .message{
+        background: #03a9f4;
+        padding: 15px 10px;
+        /* border-radius: 21px; */
+        color: #fff;
+        font-weight: 700;
+        border-radius: 7px;
+    }
+}
+
+.container-c{
+    margin: 0 auto;
+    max-width:50%;
+    margin-top: 10px;
+    text-align: center;
+    form{
+        text-align: start;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        label:first-of-type{margin-top: 15px;}
+        input, textarea{
+            margin-bottom: 20px;
+            margin-top: 15px;
+        }
+        input[type="text"]{
+            background: #ececec;
+            border: none;
+            height: 22px;
+            color: black;
+            padding: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+        textarea{
+            background: #ececec;
+            border: none;
+            color: black;
+            padding: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+        input[type="submit"]{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            border: none;
+            outline: none;
+            padding: 15px 0;
+            width: 200px;
+            text-transform: uppercase;
+            color: white;
+            font-weight: 800;
+            font-size: 20px;
+            background: linear-gradient(90deg, #44acdc 0%, #4f81ee 100%);
         }
     }
 }

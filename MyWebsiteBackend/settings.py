@@ -133,3 +133,6 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'full',
     },
 }
+
+#Webhook
+WEBHOOK_DC = 'https://discord.com/api/webhooks/820986349979959328/V6OTkDIbIXD7jluKDHYNwTRr4wp8ELx0f2cUl1XzefQX8uzbsbJROtDN6krLaFXKvWX_'
