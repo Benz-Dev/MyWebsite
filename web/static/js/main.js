@@ -17,5 +17,10 @@ $(document).ready(function () {
     }
 
     navbarFixed();
+    // Navbar mobile
+    $(".btn-mobile").click(function (e) { 
+        e.preventDefault();
+        $(".navbar-mobile").toggleClass('display');
+    });
 
 });
