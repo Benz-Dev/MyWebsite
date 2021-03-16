@@ -17,10 +17,10 @@
             <div class="logo"><img src="{% static 'img/logo.png' %}" alt="Logo"></div>
             <div class="links">
                 <a href="/">Inicio</a>
-                <a href="/#skills">Sobre mí</a>
-                <a href="/#proyectos">Proyectos</a>
-                <a href="/blog">Blog</a>
-                <a href="{% url 'contacto' %}">Contáctame</a>
+                <a href="/#sobremi" data-scroll="skills">Sobre mí</a>
+                <a href="/#proyectos" data-scroll="proyectos">Proyectos</a>
+                <a href="/blog" data-scroll="blog">Blog</a>
+                <a href="{% url 'contacto' %} " data-scroll="contacto">Contáctame</a>
             </div>
             <div class="btn-mobile">
                 <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="55" onclick="this.classList.toggle('active')">

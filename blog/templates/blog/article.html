@@ -10,6 +10,11 @@
 <div class="article-header">
     <div class="article-container">
         <h1>{{article.title}}</h1>
+        <div class="dates">
+            <div class="created">{{article.created|date:"j"}} de {{article.created|date:"F"}} de {{article.created|date:"Y"}}</div>
+            <span>-</span>
+            <div class="read">Tiempo estimado de lectura {{article.get_readtime}}</div>
+        </div>
         <div class="categories">
         {% for category in article.categories.all %}
                 <a href="{% url 'categorys' category %}" class="{{category.slug}}">{{category}}</a>  

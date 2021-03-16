@@ -1,6 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 from django.urls import reverse
+import readtime 
 
 # Create your models here.
 class Category(models.Model):
@@ -25,6 +26,10 @@ class Article(models.Model):
     categories = models.ManyToManyField(Category, verbose_name="Categorias", blank=True)
     created = models.DateTimeField(auto_now_add=True, verbose_name="Creado el")
     slug = models.SlugField(null=False, unique=True, verbose_name="URL")
+
+    def get_readtime(self):
+      result = readtime.of_text(self.content)
+      return result.text 
 
     class Meta:
         verbose_name = "Artículo"

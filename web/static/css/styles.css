@@ -457,6 +457,34 @@ header .navbar .links a:last-of-type {
   border-bottom: 2px solid #ebebeb;
 }
 
+.navbar-mobile .links .active {
+  color: #03a9f4;
+}
+
+.links a:hover,
+.links .active {
+  color: #03a9f4 !important;
+}
+
+.dates {
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: absolute;
+  right: 120px;
+  bottom: 36px;
+  width: 438px !important;
+}
+
+.dates .created, .dates .read, .dates span {
+  color: white;
+  font-weight: 500;
+}
+
 .article-header {
   background-size: cover;
   background-repeat: no-repeat;
@@ -645,6 +673,42 @@ header .navbar .links a:last-of-type {
   font-size: .9rem;
 }
 
+#sobremi {
+  background: #f5f0ff;
+  padding: 45px;
+  margin-bottom: 60px;
+}
+
+#sobremi .container-sk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* max-width: 37%; */
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#sobremi .container-sk .box {
+  text-align: center;
+}
+
+#sobremi .container-sk .box .logo {
+  font-size: 45px;
+}
+
+#sobremi .container-sk .box .skill {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#sobremi .container-sk .box .skills {
+  font-size: 20px;
+}
+
 .btn-mobile {
   display: none;
 }
@@ -749,7 +813,19 @@ header .navbar .links a:last-of-type {
   }
 }
 
+@media (max-width: 1050px) {
+  .dates {
+    right: 65px !important;
+  }
+  .dates .read, .dates .created {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 950px) {
+  .dates {
+    display: none;
+  }
   article {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -787,6 +863,12 @@ header .navbar .links a:last-of-type {
 }
 
 @media (max-width: 753px) {
+  #sobremi .container-sk {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .c-a {
     max-width: 90% !important;
   }

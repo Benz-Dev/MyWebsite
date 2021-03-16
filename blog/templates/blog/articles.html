@@ -3,7 +3,7 @@
 {% block title %}Blog{% endblock title %}
 {% block content %}
 <div class="container-c c-a">
-    <div class="articles">
+    <section class="articles" data-anchor="blog" id="blog">
     {% for article in articles %}
         <article>
             <div class="section">
@@ -28,6 +28,6 @@
             <a href="{% url 'article' article.slug %}" class="link">Leer más</a>
         </article>
     {% endfor %}
-    </div>
+    </section>
 </div>
 {% endblock content %}
