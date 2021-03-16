@@ -6,13 +6,15 @@ from django.urls import reverse
 class Category(models.Model):
 
     name = models.CharField(max_length=50, verbose_name='Categoría')
-
+    slug = models.SlugField(null=False, verbose_name="Clase", default="null")
     class Meta:
         verbose_name = "Categoria"
         verbose_name_plural = "Categorias"
 
     def __str__(self):
         return self.name
+    def get_absolute_url(self):
+        return reverse('category_detail', kwargs={'slug': self.slug})    
 
 class Article(models.Model):
 
@@ -29,11 +31,11 @@ class Article(models.Model):
         verbose_name_plural = "Artículos"
 
     def __str__(self):
-        if visible == True:
+        if self.visible == True:
             public = "Público"
         else:
             public = "Privado"
-        return self.title + public
+        return self.title + ' - ' + public
     def get_absolute_url(self):
         return reverse('article_detail', kwargs={'slug': self.slug})    
     

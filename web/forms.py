@@ -32,6 +32,7 @@ class FormContact(forms.Form):
             }
         ),
          validators=[
+             validators.MaxLengthValidator(40, 'Asunto máximo 20 carácteres'),
              validators.RegexValidator('^[a0-zA9-Z\u00C0-\u00FF\s]*$', 'Utiliza carácteres válidos', 'ErrNameFormat')
          ]
     )
@@ -43,7 +44,6 @@ class FormContact(forms.Form):
             }
         ),
          validators=[
-             validators.MaxLengthValidator(20, 'Asunto máximo 20 carácteres'),
              validators.RegexValidator('^[a-zA-Z\u00C0-\u00FF\s]*$', 'Utiliza carácteres válidos', 'ErrNameFormat')
          ]
     )

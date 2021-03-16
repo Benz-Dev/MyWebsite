@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title %}{{article.title}}{% endblock title %}
+{% block content %}
+<style>
+.article-header{
+    background-image: url('{{article.image.url}}');
+}
+</style>
+<div class="article-header">
+    <div class="article-container">
+        <h1>{{article.title}}</h1>
+        <div class="categories">
+        {% for category in article.categories.all %}
+                <a href="{% url 'categorys' category %}" class="{{category.slug}}">{{category}}</a>  
+                {% if forloop.counter < article.categories.all|length %}
+                    {{'  '}}
+                {%endif%}
+        {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="container-c c-a">
+    <div class="article-body">
+        {{article.content|safe}}
+    </div>
+</div>
+{% endblock content %}

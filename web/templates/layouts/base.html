@@ -16,10 +16,10 @@
         <nav class="navbar">
             <div class="logo"><img src="{% static 'img/logo.png' %}" alt="Logo"></div>
             <div class="links">
-                <a href="/#inicio">Inicio</a>
+                <a href="/">Inicio</a>
                 <a href="/#skills">Sobre mí</a>
                 <a href="/#proyectos">Proyectos</a>
-                <a href="#">Blog</a>
+                <a href="/blog">Blog</a>
                 <a href="{% url 'contacto' %}">Contáctame</a>
             </div>
             <div class="btn-mobile">
@@ -38,10 +38,10 @@
         </nav>
         <nav class="navbar-mobile">
             <div class="links">
-                <a href="/#inicio">Inicio</a>
+                <a href="/">Inicio</a>
                 <a href="/#skills">Sobre mí</a>
                 <a href="/#proyectos">Proyectos</a>
-                <a href="#">Blog</a>
+                <a href="/blog">Blog</a>
                 <a href="{% url 'contacto' %}">Contáctame</a>
             </div>
         </nav>
@@ -51,7 +51,7 @@
     </main>
     <footer class="footer-site">
         <div class="container">
-            <img src="#" alt="logo1">
+            <!-- <img src="{% static 'img/logo.png' %}" alt="logo1" style="width: 2rem;"> -->
             <h3>Sigueme en</h3>
             <div class="socials">
                 <ul>
